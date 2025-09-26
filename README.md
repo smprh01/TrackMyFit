@@ -39,5 +39,5 @@ TrackMyFit is a comprehensive health and wellness web platform designed to help 
 
 If you have any questions or suggestions, feel free to reach out:
 
-- **Email:** priyankasinghal3506@gmail.com
-- **Linkedin:** https://www.linkedin.com/in/priyankasinghal06
+- **Email:** priyankasinghal3506@gmail.com || sakshi105bteceai22@igdtuw.ac.in
+- **Linkedin:** https://www.linkedin.com/in/priyankasinghal06 || https://www.linkedin.com/in/sakshi-raj-140a20249
