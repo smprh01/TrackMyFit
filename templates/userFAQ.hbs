@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link rel="stylesheet" href="faqspage.css">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+     <header class="navbar">
+        <div class="navbar-logo"> <a href="index.html" class="logo-link"> 
+            <img src="images/logo.png" alt="TrackMyFit Logo" class="logo-icon"> 
+            <span class="logo-text">TrackMyFit</span> </a> 
+        </div>
+        <!-- Hamburger toggle --> 
+         <input type="checkbox" id="menu-toggle"> 
+         <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i> </label>
+        <ul class="navbar-links">
+            <li><a href="/userHome">Home</a></li>
+            <li><a href="/dashboard">DashBoard</a></li>
+                <li class="dropdown">
+                <div class="dropdown-wrapper">
+                    <div class="user-toggle">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><span>{{username}}</span></li>
+                        <li><a href="/">Logout</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header>
+      
+
+  <!---Content--->
+  <h1 class="faqq">Frequently Asked Questions</h1>
+  <p class="fapp">
+      Got a question? We're here to answer! If you don't see<br> 
+      your question here, drop us a line on our Feedback page.
+  </p>
+  
+  <!-- FAQ Section -->
+  <div class="container mt-5">
+      <div class="faq-container">
+      <!-- FAQ 1 -->
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(1)">
+        <span>What is the Daily Intake Tracker?</span>
+        <span class="close-btn" onclick="closeAnswer(event, 1)">×</span>
+    </div>
+    <div class="faq-answer" id="answer1">
+        The Daily Intake Tracker helps users log their daily meals, fluids, snacks, fruits, and junk food to maintain healthy eating habits and track progress over time.
+    </div>
+</div>
+
+<!-- FAQ 2 -->
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(2)">
+        <span>Can I view and download my previous intake reports?</span>
+        <span class="close-btn" onclick="closeAnswer(event, 2)">×</span>
+    </div>
+    <div class="faq-answer" id="answer2">
+        Yes, TrackMyFit stores all your daily intake reports, which can be viewed in tabular form and downloaded as PDFs for personal reference.
+    </div>
+</div>
+
+<!-- FAQ 3 -->
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(3)">
+        <span>How does the BMI calculator work?</span>
+        <span class="close-btn" onclick="closeAnswer(event, 3)">×</span>
+    </div>
+    <div class="faq-answer" id="answer3">
+        The BMI calculator uses your height and weight to determine your Body Mass Index and categorize you as underweight, normal, overweight, or obese.
+    </div>
+</div>
+
+<!-- FAQ 4 -->
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(4)">
+        <span>What types of eye tests are available?</span>
+        <span class="close-btn" onclick="closeAnswer(event, 4)">×</span>
+    </div>
+    <div class="faq-answer" id="answer4">
+        TrackMyFit offers three online eye tests to evaluate your vision accuracy, focus speed, and cognitive flexibility based on standard medical formats.
+    </div>
+</div>
+
+<!-- FAQ 5 -->
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(5)">
+        <span>Is my personal health data secure on this platform?</span>
+        <span class="close-btn" onclick="closeAnswer(event, 5)">×</span>
+    </div>
+    <div class="faq-answer" id="answer5">
+        Yes, we prioritize data privacy and ensure that all user data is securely stored and used only to enhance your health insights and reports.
+    </div>
+</div>
+
+<!-- FAQ 6 -->
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(6)">
+        <span>What health risks does TrackMyFit help identify?</span>
+        <span class="close-btn" onclick="closeAnswer(event, 6)">×</span>
+    </div>
+    <div class="faq-answer" id="answer6">
+        Based on your inputs and test results, TrackMyFit can give early insights into potential risks like obesity, high BMI, eye strain, and unhealthy eating patterns.
+    </div>
+</div>
+
+<!-- FAQ 7 -->
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(7)">
+        <span>Do I need internet to use TrackMyFit?</span>
+        <span class="close-btn" onclick="closeAnswer(event, 7)">×</span>
+    </div>
+    <div class="faq-answer" id="answer7">
+        Yes. Since TrackMyFit is a web-based platform, you need an internet connection to log your data and access reports.
+    </div>
+</div>
+
+<!-- FAQ 8 -->
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(8)">
+        <span>Is the platform suitable for all users?</span>
+        <span class="close-btn" onclick="closeAnswer(event, 8)">×</span>
+    </div>
+    <div class="faq-answer" id="answer8">
+        TrackMyFit is designed for users of all ages, but younger users are advised to explore the platform with parental guidance for best understanding.
+    </div>
+</div>
+
+<!-- FAQ 9 -->
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(9)">
+        <span>Can I share my reports with a doctor?</span>
+        <span class="close-btn" onclick="closeAnswer(event, 9)">×</span>
+    </div>
+    <div class="faq-answer" id="answer9">
+        Absolutely. You can download your PDF report and share it with your doctor, trainer, or nutritionist for professional advice.
+    </div>
+</div>
+
+<!-- FAQ 10 -->
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(10)">
+        <span>What health risks does TrackMyFit check for?</span>
+        <span class="close-btn" onclick="closeAnswer(event, 10)">×</span>
+    </div>
+    <div class="faq-answer" id="answer10">
+        The platform gives alerts for common risks such as:
+             - Dehydration
+             - Malnutrition
+             - Junk food overconsumption
+             - Poor diet balance
+    </div>
+</div>
+
+<!-- FAQ 11 -->
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(11)">
+        <span>How often should I update my intake and health data?</span>
+        <span class="close-btn" onclick="closeAnswer(event, 11)">×</span>
+    </div>
+    <div class="faq-answer" id="answer11">
+        For accurate insights, we recommend logging your data daily or whenever your diet, habits, or routine changes significantly.
+    </div>
+</div>
+
+<!-- FAQ 12 -->
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(12)">
+        <span>Can I track improvements over time?</span>
+        <span class="close-btn" onclick="closeAnswer(event, 12)">×</span>
+    </div>
+    <div class="faq-answer" id="answer12">
+        Yes, all past intake logs and test results are saved so you can monitor your health trends and improvements month-to-month.
+    </div>
+</div>
+
+      </div>
+  </div>
+    
+<br>
+<br>
+<br>
+<br>
+
+
+    <!-- Footer -->
+
+<footer>
+    <div class="footer-bottom">
+        <p>2024 © TrackMyFit</p>
+    </div>
+</footer>
+
+<script src="faqscript.js"></script>
+
+<!--For small screen userdropdown-->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const userDropdown = document.querySelector('.navbar-links li.dropdown');
+
+    if(userDropdown){
+      userDropdown.querySelector('.user-toggle').addEventListener('click', (e) => {
+        e.preventDefault();
+        userDropdown.classList.toggle('active');
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

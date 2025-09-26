@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+  <link href="bmiStyle.css" rel="stylesheet">
+  <title>BMI Calculator</title>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  </head>
+<body>
+   
+  
+       <header class="navbar">
+        <div class="navbar-logo"> <a href="index.html" class="logo-link"> 
+            <img src="/images/logo.png" alt="TrackMyFit Logo" class="logo-icon"> 
+            <span class="logo-text">TrackMyFit</span> </a> 
+        </div>
+        <!-- Hamburger toggle --> 
+         <input type="checkbox" id="menu-toggle"> 
+         <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i> </label>
+        <ul class="navbar-links">
+            <li><a href="/dashboard">DashBoard</a></li>
+        </ul>
+    </header>
+
+
+<br>   
+<div class="bodyContainer">
+  <div class="calculator">
+    <h2>BMI Calculator</h2>
+    <label for="weight">Weight (kg):</label>
+    <input id="weight" required="" type="number" />
+
+    <label for="height">Height (cm):</label>
+    <input id="height" required="" type="number" />
+
+    <button onclick="calculateBMI()">Calculate BMI</button>
+
+    <div id="result"></div>
+  </div>
+</div>
+<br><br><br><br>  
+  <footer>
+        <div class="footer-bottom">
+            <p>2024 © TrackMyFit</p>
+        </div>
+    </footer>
+
+  <script src="bmi.js"></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    background-color: #caf0f8;
+}
+
+
+
+/******************************** Navbar *************************************/
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 5px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #0077b6;
+}
+
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/*Logo*/
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 5px;
+    padding-left: 20px;
+}
+
+.logo-icon {
+    height: 35px;
+    width: 50px;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: navy;
+}
+
+
+.navbar-logo img {
+    height: 40px;
+    padding-left: 30px;
+}
+
+
+
+
+/******************************content************************************************/
+.aboutuspage {
+    text-align: center;
+    padding: 20px;
+}
+
+.aboutuspage h1 {
+    font-size: 50px;
+    color: #333;
+    margin: 0;
+}
+
+
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+.left-section {
+    flex: 0.7;
+    width: 25%;
+    padding-left: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    /* background-color: #f9f9f9; */
+    background-color: #caf0f8;
+    border-right: 2px solid #666;
+}
+
+.left-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-section ul li {
+    margin: 15px 0;
+}
+
+.left-section ul li a {
+    text-decoration: none;
+    color: #0078D4;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.left-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.right-section {
+    width: 75%;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+.right-section h2 {
+    color: #333;
+    margin-top: 0;
+    font-size: 35px;
+}
+
+.right-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.right-section p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+
+#contact-us p{
+    margin-top: 20px;
+    line-height: 0.8;
+    color: #555;
+}
+
+#contact-us p a{
+    text-decoration: none;
+    color: #555;
+}
+
+#contact-us p a:hover{
+    color: #007bff;
+}
+
+/* Footer styles */
+footer {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    position: relative;
+}
+
+
+.footer-bottom {
+    padding-top: 15px;
+    margin-top: -20px;
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* Responsive full-width dropdown NAVBAR*/
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+    .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+  }
+    .navbar-links li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-links li a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+  }
+  
+  .navbar-logo{
+    margin-left: -60px;
+  }
+
+  /* Slide down animation */
+  #menu-toggle:checked + .menu-icon + .navbar-links {
+    max-height: 500px; /* enough space for links */
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+
+
+
+/*Responsive */
+@media (max-width: 992px) {
+  .aboutuspage h1 {
+    font-size: 36px;
+  }
+
+  .right-section h2 {
+    font-size: 28px;
+  }
+
+  .right-section p {
+    font-size: 16px;
+  }
+
+  .left-section ul li a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .left-section {
+    width: 100%;
+    padding: 15px;
+    border-right: none;
+    border-bottom: 2px solid #666;
+    text-align: center;
+  }
+
+  .left-section ul li {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .left-section ul li a {
+    font-size: 14px;
+  }
+
+  .right-section {
+    width: 100%;
+    padding: 20px 15px;
+  }
+
+  .aboutuspage h1 {
+    font-size: 35px;
+  }
+
+  .right-section h2 {
+    font-size: 24px;
+  }
+
+  .right-section p {
+    font-size: 18px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+
+  .aboutuspage h1 {
+    font-size: 28px;
+  }
+
+  .right-section h2 {
+    font-size: 20px;
+  }
+
+  .right-section p {
+    font-size: 16px;
+  }
+
+  .left-section ul li a {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    font-size: 16px;
+  }
+}
+

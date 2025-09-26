@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/signup.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body>
+
+
+      <header class="navbar">
+        <div class="navbar-logo"> 
+            <a href="index.html" class="logo-link"> 
+            <img src="images/logo.png" alt="TrackMyFit Logo" class="logo-icon"> 
+            <span class="logo-text">TrackMyFit</span> </a> 
+        </div>
+        <!-- Hamburger toggle --> 
+         <input type="checkbox" id="menu-toggle"> 
+         <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i> </label>
+        <ul class="navbar-links">
+            <li><a href="/">Home</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form action="/signup" method="post">
+            <input type="text" name="name" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+
+    
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bottom">
+      <p>2024 © TrackMyFit</p>
+    </div>
+  </footer>
+</body>
+</html>

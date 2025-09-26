@@ -1,0 +1,259 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    overflow: auto;
+}
+
+
+
+
+/***************************** Navbar styling ********************************/
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 5px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+   font-weight: 400 !important;
+}
+
+.navbar-links li a:hover {
+  color: #0077b6;
+}
+
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.logo-icon {
+    height: 35px; /* Adjust as needed */
+    width: 50px;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: navy;
+}
+
+.navbar-logo img {
+    height: 40px;
+    padding-left: 30px;
+}
+
+
+
+
+
+
+
+
+body {
+    line-height: 1.6;
+    background-color: #caf0f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+   
+}
+
+
+
+.dashboard-btn{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #424141;
+    background-color: white;
+    border: 2px solid #e3dede;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+.download-btn {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #424141;
+    background-color: white;
+    border: 2px solid #e3dede;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.dashboard-btn:hover, .download-btn:hover {
+    color: #3b3b3b;
+    transform: translateY(-2px);
+}
+
+.dashboard-btn:active, .download-btn:active {
+    color: #3b3b3b;
+    transform: translateY(0);
+}
+
+h1 {
+    font-size: 36px;
+    color: #423f3f;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f5f5f5;
+    color: #343333;
+    font-weight: 600;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+td.category{
+    cursor: pointer;
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+
+/********************************Responsive styles**************************/
+@media (max-width: 768px) {
+
+  /* Navbar adjustments */
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .navbar-links li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-links li a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+  }
+
+  #menu-toggle:checked + .menu-icon + .navbar-links {
+    display: flex;
+  }
+
+  .navbar-logo {
+    margin-left: 0;
+  }
+
+  .logo-icon{
+    margin-left: -60px;
+  }
+
+}

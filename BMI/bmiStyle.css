@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    background-color: #caf0f8;
+}
+
+
+
+/******************************** Navbar *************************************/
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 5px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #0077b6;
+}
+
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/*Logo*/
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 5px;
+    padding-left: 20px;
+}
+
+.logo-icon {
+    height: 35px;
+    width: 50px;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: navy;
+}
+
+
+.navbar-logo img {
+    height: 40px;
+    padding-left: 30px;
+}
+
+
+
+
+
+.bodyContainer {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #caf0f8;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.calculator {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.calculator:hover {
+  transform: scale(1.02);
+}
+
+.calculator h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #2c3e50;
+}
+
+label {
+  text-align: left;
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #95B4CC;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #95B4CC;
+}
+
+#result {
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+
+.bmi-box {
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.bmi-box.underweight {
+  background-color: #e0f7fa;
+  color: #006064;
+  border-left: 5px solid #00acc1;
+}
+
+.bmi-box.normal {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-left: 5px solid #43a047;
+}
+
+.bmi-box.overweight {
+  background-color: #fff8e1;
+  color: #f57f17;
+  border-left: 5px solid #f9a825;
+}
+
+.bmi-box.obese {
+  background-color: #ffebee;
+  color: #c62828;
+  border-left: 5px solid #e53935;
+}
+
+.bmi-chart {
+  text-align: left;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.bmi-chart h4 {
+  margin-bottom: 10px;
+}
+
+.bmi-chart ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bmi-chart li {
+  margin-bottom: 8px;
+}
+
+
+footer {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    position: relative;
+}
+
+.footer-bottom {
+    padding-top: 15px;
+    margin-top: -20px;
+    font-size: 16px;
+    color: #666;
+}
+
+
+/* Responsive full-width dropdown NAVBAR */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        padding: 10px 0;
+        border-top: 1px solid #ddd;
+    }
+
+    .navbar-links li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-links li a {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    /* Slide down animation */
+    #menu-toggle:checked + .menu-icon + .navbar-links {
+        max-height: 500px;
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar-logo {
+        margin-left: 0; /* Remove negative margin */
+    }
+
+
+}

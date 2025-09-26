@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    background-color: #caf0f8;
+}
+
+/******************************** Navbar *************************************/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 5px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+    color: #0077b6;
+}
+
+/* Hamburger icon */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/*Logo*/
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 5px;
+}
+
+.logo-icon {
+    height: 35px;
+    width: 50px;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: navy;
+}
+
+
+
+.navbar-logo img {
+    height: 40px;
+    padding-left: 30px;
+}
+
+
+
+/* Dropdown container */
+.navbar-links li.dropdown {
+  position: relative;
+}
+
+/* Dropdown wrapper containing icon + menu */
+.dropdown-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Show dropdown when hovering over the icon or menu */
+.dropdown-wrapper:hover .dropdown-menu {
+  display: flex;
+}
+
+/* User icon */
+.user-toggle {
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Directly below user icon */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-width: 140px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  padding: 5px 0;
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+  list-style: none;
+  width: 100%;
+}
+
+.dropdown-menu span {
+  display: block;
+  padding: 10px 15px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/***********************Content**********************************/
+/* FAQ Section Styling */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #eef7ff;
+    border: 1px solid #caf0f8;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faqq {
+    padding-top: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.fapp {
+    font-size: 20px;
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.faq-question:hover {
+    /* background-color: #eef7ff; */
+    color: #007BFF;
+}
+
+.faq-answer {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+    padding-left: 10px;
+    display: none; /* Hidden by default */
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* Show answer when FAQ is open */
+.faq-item.open .faq-answer {
+    display: block;
+}
+
+/* Cross Button Styling */
+.close-btn {
+    font-size: 30px;
+    color: #999;
+    font-weight: 900;
+    cursor: pointer;
+    margin-left: 10px;
+    display: none; /* Hidden by default */
+    transition: color 0.3s ease;
+}
+
+/* Show cross button when FAQ is open */
+.faq-item.open .close-btn {
+    display: inline-block;
+}
+
+.close-btn:hover {
+    color: #ff0000;
+}
+
+
+
+
+/* Footer styles */
+footer {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    position: relative;
+}
+
+.footer-bottom {
+    padding-top: 15px;
+    margin-top: -20px;
+    font-size: 16px;
+    color: #666;
+}
+
+
+
+/* Responsive full-width dropdown NAVBAR */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        padding: 10px 0;
+        border-top: 1px solid #ddd;
+    }
+
+    .navbar-links li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-links li a {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    /* Slide down animation */
+    #menu-toggle:checked + .menu-icon + .navbar-links {
+        max-height: 500px;
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar-logo {
+        margin-left: 0; /* Remove negative margin */
+    }
+
+       /* Center the user icon */
+  .navbar-links li.dropdown {
+      width: 100%;
+      text-align: center;
+  }
+
+  .dropdown-wrapper {
+      justify-content: center;
+      align-items: center;
+      position: relative;
+  }
+
+  /* Make dropdown relative so it flows in column */
+  .dropdown-menu {
+      position: relative;
+      top: 0;
+      right: 0;
+      margin: 10px auto 0 auto;
+      display: none; /* hidden by default */
+      flex-direction: column;
+  }
+
+  /* Show dropdown when parent has active class */
+  .navbar-links li.dropdown.active .dropdown-menu {
+      display: flex;
+  }
+}
+
+
+/* Medium Screens: Tablets */
+@media (max-width: 992px) {
+    .faq-container {
+        width: 90%;
+        padding: 10px;
+    }
+    
+    .faqq {
+        font-size: 36px;
+    }
+
+    .fapp {
+        font-size: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+
+    }
+
+    .faq-question {
+        font-size: 18px;
+    }
+
+    .close-btn{
+      padding-right: 10px;
+    }
+}
+
+/* Small Screens: Mobile */
+@media (max-width: 600px) {
+    .faq-container {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .faqq {
+        font-size: 36px;
+    }
+
+    .fapp {
+        font-size: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+
+    }
+
+    .faq-question {
+        font-size: 18px;
+    }
+
+    .close-btn {
+        padding-right: 10px;
+    }
+}

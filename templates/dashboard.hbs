@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TrackMyFit Dashboard</title>
+  <link rel="stylesheet" href="/dashboard.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+    <!-- Logo -->
+    <div class="navbar-logo">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="TrackMyFit Logo" class="logo-icon">
+        <span class="logo-text">TrackMyFit</span>
+      </a>
+    </div>
+
+    <!-- Hamburger Toggle -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+
+    <!-- Navbar Links -->
+    <ul class="navbar-links">
+            <li><a href="/userFAQ">FAQs</a></li>
+            <li><a href="/userHome">Home</a></li>
+            <li class="dropdown">
+                <div class="dropdown-wrapper">
+                    <div class="user-toggle">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><span>{{username}}</span></li>
+                        <li><a href="/">Logout</a></li>
+                    </ul>
+                </div>
+            </li>
+
+    </ul>
+  </header>
+
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
+
+
+  <!-- Section 1: Top Images -->
+  <section class="image-section">
+    <img src="/images/fit1.jpg" alt="Fit 1">
+    <img src="/images/fluid2.avif" alt="Fit 2">
+    <img src="/images/healthyDiet1.jpg" alt="Fit 3">
+  </section>
+
+  <!-- Section 2: Feature Cards -->
+  <main class="main-content">
+    <div class="card-container">
+      <div class="card">
+        <h3>Daily Intake Tracker</h3>
+        <p>Track your daily intake and maintain your health routine.</p>
+        <a href="/dailyintake" class="btn">Start</a>
+        <a href="/report?username={{username}}" class="report-link">View Report</a>
+      </div>
+
+      <div class="card">
+        <h3>BMI Calculator</h3>
+        <p>Calculate your Body Mass Index quickly and easily.</p>
+        <a href="/bmi" class="btn">Start</a>
+      </div>
+
+      <div class="card">
+        <h3>Eye Check Up</h3>
+        <p>Perform a basic eye check to monitor your vision.</p>
+        <a href="/eyecheckup" class="btn">Start</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Section 3: Bottom Images -->
+  <section class="image-section">
+    <img src="/images/GirlDrinkingWater.webp" alt="Health 1">
+    <img src="/images/waterFruits.webp" alt="Health 2">
+    <img src="/images/diet5.png" alt="Health 3">
+  </section>
+
+  <!-- Footer -->
+   <footer>
+        <div class="footer-bottom">
+            <p>2024 © TrackMyFit</p>
+        </div>
+    </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const username = params.get("username");
+    if (username) {
+      localStorage.setItem("username", username);
+    }
+  </script>
+
+
+
+<!--For small screen userdropdown-->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const userDropdown = document.querySelector('.navbar-links li.dropdown');
+
+    if(userDropdown){
+      userDropdown.querySelector('.user-toggle').addEventListener('click', (e) => {
+        e.preventDefault();
+        userDropdown.classList.toggle('active');
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

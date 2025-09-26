@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Intake Tracker</title>
+  <link rel="stylesheet" href="dailyIntakestyles.css" />
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+<div>
+
+       <header class="navbar">
+        <div class="navbar-logo"> <a href="index.html" class="logo-link"> 
+            <img src="/images/logo.png" alt="TrackMyFit Logo" class="logo-icon"> 
+            <span class="logo-text">TrackMyFit</span> </a> 
+        </div>
+        <!-- Hamburger toggle --> 
+         <input type="checkbox" id="menu-toggle"> 
+         <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i> </label>
+        <ul class="navbar-links">
+            <li><a href="/dashboard">DashBoard</a></li>
+        </ul>
+    </header>
+
+
+
+
+<div class="bodyContainer">
+  <h1>Daily Intake Tracker</h1>
+
+  <form id="intakeForm">
+    <label for="logDate">Select Date:</label>
+    <input type="date" id="logDate" name="logDate" required />
+
+    <h2>Fluid Intake (in ml)</h2>
+    <div class="flex-row">
+      <div class="flex-col">
+        <label for="water">Water:</label>
+        <input type="number" id="water" name="water" min="0" value="0" />
+      </div>
+      <div class="flex-col">
+        <label for="milk">Milk:</label>
+        <input type="number" id="milk" name="milk" min="0" value="0" />
+      </div>
+      <div class="flex-col">
+        <label for="teaCoffee">Tea / Coffee:</label>
+        <input type="number" id="teaCoffee" name="teaCoffee" min="0" value="0" />
+      </div>
+      <div class="flex-col">
+        <label for="juice">Juice:</label>
+        <input type="number" id="juice" name="juice" min="0" value="0" />
+      </div>
+      <div class="flex-col">
+        <label for="softDrinks">Soft Drinks:</label>
+        <input type="number" id="softDrinks" name="softDrinks" min="0" value="0" />
+      </div>
+    </div>
+
+    <h2>Meals</h2>
+    <label for="breakfast">Breakfast:</label>
+    <textarea id="breakfast" name="breakfast" rows="2" placeholder=""></textarea>
+
+    <label for="lunch">Lunch:</label>
+    <textarea id="lunch" name="lunch" rows="2" placeholder=""></textarea>
+
+    <label for="dinner">Dinner:</label>
+    <textarea id="dinner" name="dinner" rows="2" placeholder=""></textarea>
+
+    <h2>Fruits, Snacks & Junk Food</h2>
+    <label for="fruits">Fruits:</label>
+    <input type="text" id="fruits" name="fruits" placeholder="e.g. apple, banana, orange" /><br /><br />
+
+    <label for="healthySnacks">Healthy Snacks:</label>
+    <input type="text" id="healthySnacks" name="healthySnacks" placeholder="e.g. nuts, yogurt, salad" /><br /><br />
+
+    <label for="mildJunk">Mild Junk Food:</label>
+    <input type="text" id="mildJunk" name="mildJunk" placeholder="e.g. chips, biscuits, chocolate" /><br /><br />
+
+    <label for="excessiveJunkFood">Unhealthy Junk Food:</label>
+    <input type="text" id="excessiveJunkFood" name="excessiveJunkFood" placeholder="e.g. burger, pizza, fries" /><br /><br />
+
+    <button type="submit">Log Today's Intake</button>
+  </form>
+
+  <div class="log-output" id="logOutput" style="display:none;">
+    <h2>Today's Log - <span id="displayDate"></span></h2>
+
+    <div class="section">
+      <h3>Fluids Intake</h3>
+      <p>💧 Water: <span id="logWater"></span> ml</p>
+      <p>🥛 Milk: <span id="logMilk"></span> ml</p>
+      <p>☕ Tea / Coffee: <span id="logTeaCoffee"></span> ml</p>
+      <p>🍹 Juice: <span id="logJuice"></span> ml</p>
+      <p>🥤 Soft Drinks: <span id="logSoftDrinks"></span> ml</p>
+    </div>
+
+    <div class="section">
+      <h3>Meals</h3>
+      <p>🍳 Breakfast: <span id="logBreakfast"></span></p>
+      <p>🍱 Lunch: <span id="logLunch"></span></p>
+      <p>🍲 Dinner: <span id="logDinner"></span></p>
+    </div>
+
+    <div class="section">
+      <h3>Fruits, Snacks & Junk Food</h3>
+      <p>🍎 Fruits: <span id="logFruits"></span></p>
+      <p>🍘 Healthy Snacks: <span id="logHealthySnacks"></span></p>
+      <p>🍪 Mild Junk Food: <span id="logMildJunk"></span></p>
+      <p>🍔 Excessive Junk Food: <span id="logExcessiveJunkFood"></span></p>
+    </div>
+
+    <div class="section">
+      <h3>Evaluations</h3>
+      <p><strong>Fluid Intake Status:</strong> <span id="fluidStatus"></span></p>
+      <p><strong>Meals Status:</strong> <span id="mealsStatus"></span></p>
+      <p><strong>Fruits, Snacks & Junk Food Status:</strong> <span id="fruitsSnackJunkStatus"></span></p>
+    </div>
+
+    <div class="section">
+      <h3>Feedback</h3>
+      <p id="feedbackMessage"></p>
+    </div>
+  </div>
+</div>
+
+  <footer>
+        <div class="footer-bottom">
+            <p>2024 © TrackMyFit</p>
+        </div>
+    </footer>
+
+
+ 
+
+  <script src="daily.js"></script>
+</body>
+</html>

@@ -1,0 +1,672 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    background-color: #caf0f8;
+}
+
+
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 5px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #0077b6;
+}
+
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 5px;
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Dropdown container */
+.navbar-links li.dropdown {
+  position: relative;
+}
+
+/* Dropdown wrapper containing icon + menu */
+.dropdown-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Show dropdown when hovering over the icon or menu */
+.dropdown-wrapper:hover .dropdown-menu {
+  display: flex;
+}
+
+/* User icon */
+.user-toggle {
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Directly below user icon */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-width: 140px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  padding: 5px 0;
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+  list-style: none;
+  width: 100%;
+}
+
+.dropdown-menu span {
+  display: block;
+  padding: 10px 15px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Logo styling */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.logo-icon {
+  height: 35px;
+  width: 50px;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: navy;
+}
+
+.navbar-logo img {
+    height: 40px;
+    padding-left: 30px;
+}
+
+/***********************Main Content**********************************/
+
+.mainContent {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 10px;
+    background-image: url('images/mainBG.png'); /* Add this line */
+    background-size: 80% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mainContent::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(61, 94, 101, 0.5); /* semi-transparent black */
+    z-index: 0;
+}
+
+/* Raise the z-index of the text content */
+.mainContent * {
+    position: relative;
+    z-index: 1;
+}
+
+.headingmain {
+    color: white;
+    text-align: left;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-left: 70px;
+    margin-right: 500px;
+}
+
+.para {
+    color: rgb(82, 35, 35);
+    text-align: left;
+    font-size: 25px;
+    margin-left:100px;
+    margin-right: 400px
+}
+
+
+/******************* FirstContent Section: Vision, Mission, Impact *******************/
+.FirstContent {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #caf0f8;
+    padding: 50px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.card1, .card2, .card3 {
+    background: #d3e7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    max-width: 350px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card1:hover, .card2:hover, .card3:hover {
+    transform: translateY(-5px);
+    background-color: #95B4CC;
+}
+
+.wave-container {
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave {
+    background: linear-gradient(to right, #95B4CC, #caf0f8, #95B4CC);
+    height: 60px;
+    clip-path: ellipse(60% 100% at 50% 0%);
+}
+
+
+/*************Services Section***********************/
+.services-section {
+    background-color: #caf0f8;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.services-heading {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #d3e7f7;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 25px;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    background-color: #95B4CC;
+}
+
+.service-icon {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+
+/*****************Healthy Living*****************************/
+
+.healthy-living-section {
+  padding: 40px 20px;
+  max-width: 1200px;   /* same width as rest sections */
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #caf0f8;
+  color: #333;
+}
+
+/* Content blocks */
+.content-block {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #caf0f8; /* line under each block */
+  flex-wrap: wrap;
+}
+
+/* Text styling */
+.content-block .text {
+  flex: 1 1 55%;
+  min-width: 280px;
+}
+
+/* Image containers */
+.content-block .imageRight,
+.content-block .imageLeft {
+  flex: 1 1 40%;
+  min-width: 280px;
+  background-color: #caf0f8; /* match section bg to avoid white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* optional padding so image not flush with container edges */
+  border-radius: 12px;
+  /*box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* subtle shadow */
+  /* Remove fixed height here */
+}
+
+/* Images styled */
+.content-block img {
+  max-width: 100%;
+  max-height: 250px; /* max height instead of fixed */
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Image on right side */
+.content-block .imageRight {
+  order: 2; /* image after text */
+  text-align: right;
+}
+
+/* Image on left side */
+.content-block .imageLeft {
+  order: 0; /* image before text */
+  text-align: left;
+}
+
+/* Text order */
+.content-block .text {
+  order: 1;
+}
+
+/* Responsive: stack vertically on smaller screens */
+@media (max-width: 768px) {
+  .content-block {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .content-block .imageRight,
+  .content-block .imageLeft {
+    order: 0;
+    text-align: center;
+  }
+  
+  .content-block .text {
+    order: 1;
+  }
+
+  .content-block img {
+    height: auto; /* scale with width */
+    max-width: 100%;
+  }
+}
+
+
+/************* ThirdContent Section ********************************/
+.ThirdContent {
+    background: #caf0f8;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.ThirdContent h1 {
+    font-size: 32px;
+    color: #c62828;
+}
+
+.ThirdContent ul {
+    max-width: 1000px;
+    margin: auto;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+
+/**************Table******************/
+.comparison-section {
+    background-color: #caf0f8;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.comparison-heading {
+    font-size: 32px;
+    margin-bottom: 10px;
+     color: #064231;
+}
+
+.comparison-subtext {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.comparison-table {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comparison-header,
+.comparison-row {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr 0.5fr;
+    padding: 15px 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    align-items: center;
+}
+
+.comparison-header {
+    background-color: #a2d4fa;
+    color: #333;
+    font-weight: bold;
+}
+
+.comparison-row:nth-child(even) {
+    background-color: #eefaf8;
+}
+
+.comparison-row .TrackMyFit {
+    color: #0f9d58;
+    font-weight: bold;
+}
+
+.comparison-row .others {
+    color: #d93025;
+    font-weight: bold;
+}
+
+
+/***********************Scroll to Top Button********************************/
+
+#scrollTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 99;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  background-color: #95B4CC;
+  color: white;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: #0056b3;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    position: relative;
+}
+
+
+.footer-bottom {
+    padding-top: 15px;
+    margin-top: -20px;
+    font-size: 16px;
+    color: #666;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+
+  .mainContent {
+    background-image: url('images/logo.png'); /* Add this line */
+    background-size: 80% 100%;
+  }
+
+  /* Text inside main content */
+  .headingmain {
+    color: white;
+    font-size: 30px;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .para {
+    color: rgb(82, 35, 35);
+    font-size: 20px;
+    margin: 15px auto;
+    text-align: center;
+    max-width: 90%;
+    font-weight: 700;
+  }
+
+  /* Navbar adjustments */
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .navbar-links li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-links li a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* Show menu on toggle */
+  #menu-toggle:checked + .menu-icon + .navbar-links {
+    display: flex;
+  }
+
+  .navbar-logo {
+    margin-left: 0;
+  }
+
+  .logo-icon{
+    margin-left: -60px;
+  }
+
+   /* Center the user icon */
+  .navbar-links li.dropdown {
+      width: 100%;
+      text-align: center;
+  }
+
+  .dropdown-wrapper {
+      justify-content: center;
+      align-items: center;
+      position: relative;
+  }
+
+  /* Make dropdown relative so it flows in column */
+  .dropdown-menu {
+      position: relative;
+      top: 0;
+      right: 0;
+      margin: 10px auto 0 auto;
+      display: none; /* hidden by default */
+      flex-direction: column;
+  }
+
+  /* Show dropdown when parent has active class */
+  .navbar-links li.dropdown.active .dropdown-menu {
+      display: flex;
+  }
+
+
+  /* Disease Risk Preview (ThirdContent) */
+  
+  .content-block{
+    padding-left: 15px;
+    padding-right: 10px;
+  }
+
+  .ThirdContent ul {
+    padding: 0 20px !important; /* reduce side padding */
+    font-size: 14px; /* slightly smaller for readability */
+    line-height: 1;
+  }
+  
+  .ThirdContent li{
+    font-size: 15px;
+  }
+  .ThirdContent h1 {
+    font-size: 24px; /* smaller heading */
+  }
+
+
+
+  /* Comparison Table */
+  .comparison-header,
+  .comparison-row {
+    font-size: 11px; /* smaller font for table rows */
+    padding: 10px 8px; /* smaller padding inside cells */
+  }
+
+  .comparison-heading {
+    font-size: 24px; /* smaller heading */
+  }
+
+  .comparison-subtext {
+    font-size: 16px; /* smaller subtext */
+  }
+ 
+}
+
