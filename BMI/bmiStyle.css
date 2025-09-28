@@ -276,3 +276,16 @@ footer {
 
 
 }
+
+@media (max-width: 600px) {
+    .logo-icon{
+    margin-left: -60px;
+  }
+  
+  .calculator{
+    width: 360px;
+  }
+  .bodyContainer{
+    align-items: center;
+  }
+}
